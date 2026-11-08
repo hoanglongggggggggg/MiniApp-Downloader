@@ -1,0 +1,115 @@
+# ============================================================
+#  MiniApp-LG-Client — root .gitignore
+#  Keeps source / docs / small configs.
+#  Excludes: the backup archive, large binaries, media,
+#  reverse-engineering artifacts, secrets, and caches.
+# ============================================================
+
+# ---- Backup archive (456 MB) & other archives ----
+/full.rar
+*.rar
+*.7z
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+
+# ---- Downloaded media (videos are far over GitHub's 100 MB limit) ----
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.flv
+*.m4v
+*.webm
+downloads/
+Outputs/
+thumb_cache/
+
+# ---- IDA Pro / disassembler databases ----
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.idb
+*.i64
+
+# ---- Installers / packaged apps ----
+*.exe
+*.msi
+*.apk
+*.aab
+*.ipa
+*.dmg
+*.appimage
+
+# ---- Compiled / native binaries ----
+*.dll
+*.so
+*.so.*
+*.dylib
+*.pyd
+*.dex
+*.o
+*.a
+*.lib
+*.class
+*.pdb
+
+# ============================================================
+#  Secrets / credentials / local state — DO NOT PUBLISH
+# ============================================================
+# cookies & tokens
+cookie*.txt
+*.cookie
+token.txt
+tokens.json
+
+# local per-account / per-device state
+*.local.json
+*.local.txt
+*.local.bak.txt
+deviceid.local.txt
+
+# private keys & certs (mitm interception key is PRIVATE)
+mitm_key.pem
+mitm_cert.pem
+*.key.pem
+*_private*.pem
+id_rsa
+id_rsa.*
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# ---- Run logs (probe/reindex output) ----
+*.log
+
+# ---- Python caches / envs ----
+__pycache__/
+*.pyc
+*.pyo
+*.part
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ---- Node (if any) ----
+node_modules/
+
+# ---- GUI-automation screenshots ----
+gui_shot*.png
+tabs_shot*.png
+dlg_shot*.png
+
+# ---- Editor / OS cruft ----
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
